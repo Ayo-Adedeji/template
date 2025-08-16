@@ -11,16 +11,16 @@ const Footer = () => {
 
       {/* Social Icons */}
       <div className="flex justify-center space-x-6 mb-6">
-        <a href="#" className="text-pink-500 hover:text-pink-600 text-2xl">
+        <a href="https://instagram.com/"  target="_blank"  className="text-pink-500 hover:text-pink-600 text-2xl">
           <FaInstagram />
         </a>
-        <a href="#" className="text-blue-600 hover:text-blue-700 text-2xl">
+        <a href="https://facebook.com/"  target="_blank"  className="text-blue-600 hover:text-blue-700 text-2xl">
           <FaFacebook />
         </a>
-        <a href="#" className="text-blue-500 hover:text-blue-600 text-2xl">
+        <a href="https://www.linkedin.com/in/ayobami-omotiba-926232239/" target="_blank" rel="" className="text-blue-500 hover:text-blue-600 text-2xl">
           <FaLinkedin />
         </a>
-        <a href="#" className="text-green-500 hover:text-green-600 text-2xl">
+        <a href="https://wa.me/" target="_blank" className="text-green-500 hover:text-green-600 text-2xl">
           <FaWhatsapp />
         </a>
       </div>
