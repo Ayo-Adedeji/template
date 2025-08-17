@@ -5,11 +5,6 @@ import certificate from "../certificate.jpg";
 import work from "../work.jpg";
 import work1 from "../work1.jpg";
 
-
-
-
-
-
 const schools = [
   {
     name: "High School Name",
@@ -42,15 +37,13 @@ const schools = [
 ];
 
 const School = () => {
-
-const [selectedPhotos, setSelectedPhotos] = useState([]);
+  const [selectedPhotos, setSelectedPhotos] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = (photos) => {
     setSelectedPhotos(photos);
     setIsModalOpen(true);
   };
-
 
   return (
     <section className="p-10 bg-gradient-to-r from-primary-light/20 via-white to-accent-light/20">
@@ -64,14 +57,12 @@ const [selectedPhotos, setSelectedPhotos] = useState([]);
             key={index}
             className="bg-white/90 backdrop-blur-sm shadow-lg hover:shadow-xl hover:scale-[1.02] transition-all duration-300 flex items-center gap-5 p-5 border border-primary/20 rounded-2xl"
           >
-            {/* Logo */}
             <img
               src={school.logo}
               alt={school.name}
               className="w-16 h-16 object-contain drop-shadow-md"
             />
 
-            {/* Content */}
             <div className="flex flex-col gap-2">
               <h3 className="text-xl font-semibold text-primary-dark">
                 {school.name}
@@ -80,7 +71,6 @@ const [selectedPhotos, setSelectedPhotos] = useState([]);
                 Year Attended: {school.years}
               </p>
 
-              {/* Buttons */}
               <div className="flex gap-3 mt-3">
                 <a
                   href={school.certificate}
@@ -90,8 +80,10 @@ const [selectedPhotos, setSelectedPhotos] = useState([]);
                 >
                   View Certificate
                 </a>
-                <button onClick={() => openModal(school.photos)}
-                className="border border-primary text-primary px-4 py-1.5 rounded-lg text-sm shadow-sm hover:bg-primary/10 transition">
+                <button
+                  onClick={() => openModal(school.photos)}
+                  className="border border-primary text-primary px-4 py-1.5 rounded-lg text-sm shadow-sm hover:bg-primary/10 transition"
+                >
                   View Photos
                 </button>
               </div>
@@ -99,10 +91,12 @@ const [selectedPhotos, setSelectedPhotos] = useState([]);
           </div>
         ))}
       </div>
+
       {isModalOpen && (
         <GalleryModal
-          photos={selectedPhotos}
+          isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
+          images={selectedPhotos}
         />
       )}
     </section>

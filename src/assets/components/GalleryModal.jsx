@@ -1,4 +1,3 @@
-// src/components/GalleryModal.jsx
 import React from "react";
 
 const GalleryModal = ({ isOpen, onClose, images }) => {
@@ -7,7 +6,6 @@ const GalleryModal = ({ isOpen, onClose, images }) => {
   return (
     <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50">
       <div className="bg-white p-6 rounded-2xl shadow-lg max-w-3xl w-full relative">
-        {/* Close Button */}
         <button
           onClick={onClose}
           className="absolute top-3 right-3 text-gray-600 hover:text-gray-900 text-xl"
@@ -15,7 +13,6 @@ const GalleryModal = ({ isOpen, onClose, images }) => {
           ✕
         </button>
 
-        {/* Gallery */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
           {images.map((img, index) => (
             <img

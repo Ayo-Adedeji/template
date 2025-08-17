@@ -44,7 +44,7 @@ const WhatsAppModal = () => {
             </p>
 
             <a
-              href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+              href={`https://wa.me/${+2349031978634}?text=${encodeURIComponent(
                 defaultMessage
               )}`}
               target="_blank"
